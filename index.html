@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Resume Website</title>
+    <!-- bootstrap styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <style>
+        :root {
+            --bg: #252525;
+            --white: #dddddd;
+            font-weight: bold;
+        }
+        .navbar {
+            background: linear-gradient(90deg, rgba(25,25,25,0.8) 0%, rgba(25,25,25,0) 30%, rgba(25,25,25,0) 70%, rgba(25,25,25,0.8) 100%);
+        }
+        body {
+            background-color: var(--bg);
+            font-weight: bold;
+        }
+        .nav-home {
+            text-decoration: none;
+            color: var(--white);
+            padding-left: 20px;
+        }
+        .btn, .btn:hover{
+            color: var(--white);
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .offcanvas-body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+        }
+        .nav-list {
+            list-style-type: none;
+            padding: 0 10px;
+            font-weight: bolder;
+        }
+        .nav-list li {
+            margin: 30px 10px;
+        }
+        .nav-list li a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 70px;
+        }
+        .offcanvas-title {
+            font-weight: bolder;
+            font-size: 70px;
+            padding-left: 5px;
+            margin: 0;
+        }
+        video {
+            aspect-ratio: 18.5/9;
+        }
+        .carousel-control-prev {
+            background: linear-gradient(90deg, rgba(25,25,25,1), rgba(25,25,25,0));
+        }
+        .carousel-control-next {
+            background: linear-gradient(90deg, rgba(25,25,25,0), rgba(25,25,25,1));
+        }
+        .line {
+            width: 150px;
+            height: 3px;
+            background-color: red;
+            margin: 10px auto;
+        }
+        .name, .desc {
+            text-shadow: 0px 0px 10px var(--bg);
+            -webkit-text-stroke: .5px var(--bg);
+            margin: auto;
+        }
+        .but {
+            margin: auto;
+        }
+        .desc {
+            white-space: nowrap;
+            width: 300px;
+            overflow: hidden;
+            padding: 0 0 10px;
+            text-overflow: ellipsis; 
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar start -->
+    <nav class="navbar fixed-top">
+        <a class="nav-home" href="index.html">VResume</a>
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</button>
+        <div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">VResume</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                    <li>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- carousel start -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video class="d-block w-100">
+                    <source src="./test1.mp4" type="video/mp4">
+                </video>
+                <div class="carousel-caption d-none d-md-block text-lg-start">
+                    <h1 class="name">NAME</h1>
+                    <div class="line rounded"></div>
+                    <p class="desc">My name is so and so i want to become so and so i am so and so...</p>
+                    <button type="button" class="btn but bg-dark">view</button>
+                </div>
+                </div>
+            <div class="carousel-item">
+                <video class="d-block w-100">
+                    <source src="./test2.mp4" type="video/mp4">
+                </video>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="name">NAME</h1>
+                    <div class="line rounded"></div>
+                    <p class="desc">My name is so and so i want to become so and so i am so and so...</p>
+                    <button type="button" class="btn but bg-dark">view</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video class="d-block w-100">
+                    <source src="./test3.mp4" type="video/mp4">
+                </video>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="name">NAME</h1>
+                    <div class="line rounded"></div>
+                    <p class="desc">My name is so and so i want to become so and so i am so and so...</p>
+                    <button type="button" class="btn but bg-dark">view</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- carousel end -->
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
