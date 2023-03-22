@@ -180,3 +180,25 @@ h5 {
 .grid-card:hover {
   box-shadow: 0px 0px 30px whitesmoke;
 }
+.ftr {
+  display: flex;
+  justify-content: space-around;
+  color: whitesmoke;
+  width: 100%;
+  padding-bottom: 1%;
+}
+.ftr-title h1 {
+  font-weight: bolder;
+}
+.ftr-about {
+  margin-bottom: 50px;
+}
+.ftr-links, .ftr-nav {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+}
+.ftr-links a, .ftr-nav a {
+  text-decoration: none;
+  color: whitesmoke;
+}
