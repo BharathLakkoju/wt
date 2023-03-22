@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Resume Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/18718c7391.js" crossorigin="anonymous"></script>
     <!-- bootstrap styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
-    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
     <style>
         :root {
             --bg: #252525;
@@ -24,9 +21,10 @@
         .navbar {
             background: linear-gradient(90deg, rgba(25,25,25,0.8) 0%, rgba(25,25,25,0) 30%, rgba(25,25,25,0) 70%, rgba(25,25,25,0.8) 100%);
         }
-        body {
+        html, body {
             background-color: var(--bg);
             font-weight: bold;
+            scrollbar-width: none;
         }
         .nav-home {
             text-decoration: none;
@@ -68,54 +66,30 @@
             padding-left: 5px;
             margin: 0;
         }
-        video {
-            aspect-ratio: 2/1;
+        .carousel-item {
+            max-height: 800px;
+        }
+        .carousel-item img{
             object-fit: cover;
         }
-        .carousel-control-prev {
-            background: linear-gradient(90deg, rgba(25,25,25,1), rgba(25,25,25,0));
-        }
-        .carousel-control-next {
-            background: linear-gradient(90deg, rgba(25,25,25,0), rgba(25,25,25,1));
-        }
-        .line {
-            width: 150px;
-            height: 3px;
-            background-color: red;
-            margin: 10px auto;
-        }
-        .name, .desc {
-            text-shadow: 0px 0px 10px var(--bg);
-            -webkit-text-stroke: .5px var(--bg);
-            margin: auto;
-        }
         .but {
-            margin: auto;
-        }
-        .desc {
-            white-space: nowrap;
-            width: 300px;
-            overflow: hidden;
-            padding: 0 0 10px;
-            text-overflow: ellipsis; 
-            font-size: larger;
-        }
-        h3 {
-            text-align: center;
-            font-weight: 400;
-            margin-bottom: 0;
-        }
-        .card-title {
-            padding-left: 10px;
-        }
-        .btn-primary {
-            font-size: medium !important;
-            background-color: #252525;
+            background-color: #dddddd;
+            color: #252525;
+            padding: 5px 20px;
             border: 0;
-            border-radius: 30px;
+            text-decoration: none;
+            border-radius: 10px;
         }
         .carousel-caption {
-            background: radial-gradient(rgba(25,25,25,1) 0%,rgba(25,25,25,0) 40%, rgba(25,25,25,0));
+            background: radial-gradient(rgba(25,25,25,0.3) 0%, rgba(25,25,25,0) 40%);
+        }
+        .carousel-caption p, .carousel-caption h5 {
+            text-shadow: 0px 0px 10px black;
+        }
+        @media only screen and (max-width: 768px) {
+            .carousel-item {
+                margin-top: 70px;
+            }
         }
     </style>
 </head>
@@ -146,149 +120,33 @@
     </nav>
     <!-- navbar end -->
     <!-- carousel start -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <video class="d-block w-100">
-                    <source src="./test1.mp4" type="video/mp4">
-                </video>
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="name">NAME</h1>
-                    <div class="line rounded"></div>
-                    <p class="desc">My name is so and so i want to become so and so i am so and so...</p>
-                    <button type="button" class="btn but bg-dark">view</button>
-                </div>
-                </div>
-            <div class="carousel-item">
-                <video class="d-block w-100">
-                    <source src="./test2.mp4" type="video/mp4">
-                </video>
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="name">NAME</h1>
-                    <div class="line rounded"></div>
-                    <p class="desc">My name is so and so i want to become so and so i am so and so...</p>
-                    <button type="button" class="btn but bg-dark">view</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <video class="d-block w-100">
-                    <source src="./test3.mp4" type="video/mp4">
-                </video>
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="name">NAME</h1>
-                    <div class="line rounded"></div>
-                    <p class="desc">My name is so and so i want to become so and so i am so and so...</p>
-                    <button type="button" class="btn but bg-dark">view</button>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- carousel end -->
-    <!-- trending today -->
-    <h1 class="trend">Trending today</h1>
     <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="card-wrapper">
-                    <div class="card">
-                        <video class="d-block card-img-top w-100 item">
-                            <source src="./test1.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>        
-                    </div>
-                    <div class="card">
-                        <video class="d-block card-img-top w-100 item">
-                            <source src="./test2.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <video class="d-block w-100 item">
-                            <source src="./test3.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+                <img src="./images/img1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>            
             </div>
             <div class="carousel-item">
-                <div class="card-wrapper">
-                    <div class="card">
-                        <video class="d-block card-img-top w-100 item">
-                            <source src="./test1.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>        
-                    </div>
-                    <div class="card">
-                        <video class="d-block card-img-top w-100 item">
-                            <source src="./test2.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <video class="d-block w-100 item">
-                            <source src="./test3.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+                <img src="./images/img2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>            
             </div>
             <div class="carousel-item">
-                <div class="card-wrapper">
-                    <div class="card">
-                        <video class="d-block card-img-top w-100 item">
-                            <source src="./test1.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>        
-                    </div>
-                    <div class="card">
-                        <video class="d-block card-img-top w-100 item">
-                            <source src="./test2.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <video class="d-block w-100 item">
-                            <source src="./test3.mp4" type="video/mp4">
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title">NAME</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+                <img src="./images/img3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i> View</a>
+                </div>            
             </div>
+        </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -298,9 +156,246 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <!-- carousel end -->
     <!-- trending today end -->
-    <!--  -->
+    <h1 class="trend">trending today</h1>
+    <section class="sec">
+        <div class="arrow-left hidden">
+            <div>
+                <button type="submit" id="left"><i class="fa-solid fa-backward fa-sm" style="color: #ffffff;"></i></button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="item">
+                <img src="./images/img4.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img5.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img6.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img7.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img8.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img9.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img10.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img11.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img12.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/img13.jpg" class="item-img" alt="">
+                <div class="item-desc">
+                    <h5 class="name">NAME</h5>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+        </div>
+        <div class="arrow-right hidden">
+            <div>
+                <button type="submit" id="right"><i class="fa-solid fa-forward fa-sm" style="color: #ffffff;"></i></button>
+            </div>
+        </div>
+    </section>
+    <!-- trending today end -->
+    <!-- list start -->
+    <div class="list-container">
+        <h1 class="trend-list">list</h1>
+        <a class="btn-list" href="list.html">More&ensp;<i class="fa-solid fa-greater-than fa-sm" style="color: #ffffff;"></i></a>
+    </div>
+    <section class="list">
+        <div class="grids">
+            <div class="grid-card">
+                <img class="item-img" src="./images/img2.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img3.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img4.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img5.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img6.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img7.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img8.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img9.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img10.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img11.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img12.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img class="item-img" src="./images/img13.jpg" alt="">
+                <div class="grid-desc">
+                    <h5 class="name">NAME</h5><div></div>
+                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- list end -->
+    <!-- footer start -->
+    <footer class="ftr">
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </footer>
+    <!-- footer end -->
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const rightBtn = document.querySelector('#right');
+        const leftBtn = document.querySelector('#left');
+        const larrow = document.querySelector('.arrow-left');
+        const rarrow = document.querySelector('.arrow-right');
+        const content = document.querySelector('.cards');
+        var maxScrollLeft = content.scrollWidth - content.clientWidth;
+        rarrow.classList.remove('hidden');
+    
+            rightBtn.addEventListener("click", function (event) {
+                content.scrollLeft += 550;
+                event.preventDefault();
+            });
+    
+            leftBtn.addEventListener("click", function (event) {
+                content.scrollLeft -= 550;
+                event.preventDefault();
+            });
+    
+            content.addEventListener("scroll", function (event) {
+                if (content.scrollLeft > 0 && content.scrollLeft < maxScrollLeft) {
+                    larrow.classList.remove('hidden');
+                    rarrow.classList.remove('hidden');
+                }
+                else if (content.scrollLeft === 0 ) {
+                    larrow.classList.add('hidden');
+                    rarrow.classList.remove('hidden');
+                }
+                else if (content.scrollLeft >= content.scrollWidth-5000) {
+                    rarrow.classList.add('hidden');
+                    larrow.classList.remove('hidden');
+                }
+            });
+        
+    </script>
 </body>
 </html>
