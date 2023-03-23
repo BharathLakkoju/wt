@@ -363,7 +363,7 @@
         const rarrow = document.querySelector('.arrow-right');
         const content = document.querySelector('.cards');
         var maxScrollLeft = content.scrollWidth - content.clientWidth;
-        rarrow.classList.remove('hidden');
+        //rarrow.classList.remove('hidden');
     
             rightBtn.addEventListener("click", function (event) {
                 content.scrollLeft += 550;
@@ -375,7 +375,7 @@
                 event.preventDefault();
             });
     
-            content.addEventListener("scroll", function (event) {
+            /*content.addEventListener("scroll", function (event) {
                 if (content.scrollLeft > 0 && content.scrollLeft < maxScrollLeft) {
                     larrow.classList.remove('hidden');
                     rarrow.classList.remove('hidden');
@@ -388,7 +388,7 @@
                     rarrow.classList.add('hidden');
                     larrow.classList.remove('hidden');
                 }
-            });
+            });*/
         
         ScrollReveal().reveal('.trend', {
             delay: 200,
@@ -410,6 +410,10 @@
             delay: 300,
             reset: true,
         });
+        ScrollReveal().reveal('.grid-card', {
+            delay: 200,
+            reset: true,
+        })
         ScrollReveal().reveal('.ftr', {
             delay: 200,
             reset: true,
