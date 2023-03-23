@@ -7,6 +7,7 @@
     <title>Video Resume Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/18718c7391.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- bootstrap styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
     <style>
@@ -103,7 +104,7 @@
     </nav>
     <!-- navbar end -->
     <!-- list start -->
-    <div style="margin-top: 70px;">
+    <div class="l" style="margin-top: 70px;">
         <h1 style="text-align: center;color: whitesmoke;">LIST</h1>
     </div>
     <section class="list">
@@ -240,5 +241,23 @@
     <!-- footer end -->
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.l', {
+            delay: 200,
+            reset: true,
+        })
+        ScrollReveal().reveal('.list', {
+            delay: 300,
+            reset: true,
+        })
+        ScrollReveal().reveal('.grid-card', {
+            delay: 200,
+            reset: true,
+        })
+        ScrollReveal().reveal('.ftr', {
+            delay: 200,
+            reset: true,
+        })
+    </script>
 </body>
 </html>
