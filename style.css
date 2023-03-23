@@ -16,9 +16,6 @@
   padding: 0px 30px;
   scrollbar-width: none;
 }
-h5 {
-
-}
 .item {
   width: 300px;
   height: 300px;
@@ -39,9 +36,6 @@ h5 {
 
 .item:nth-child(odd) {
   background-color: beige;
-}
-.hidden {
-  display: none;
 }
 #left,
 #right {
@@ -185,7 +179,13 @@ h5 {
   justify-content: space-around;
   color: whitesmoke;
   width: 100%;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
+}
+.ftr-content {
+  display: flex;
+  min-width: 300px;
+  justify-content: space-between;
+  align-items: center;
 }
 .ftr-title h1 {
   font-weight: bolder;
@@ -208,7 +208,9 @@ h5 {
     gap: 10px;
     padding: 10% 0;
   }
-  .ftr-content-links {
+  .ftr-content {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
   }
 }
@@ -276,4 +278,12 @@ input:focus, textarea:focus {
 }
 span {
   color: indianred;
+}
+* {
+  transition: 500ms;
+}
+@media only screen and (max-width: 1289px) {
+  .hidden {
+    display: none !important;
+  }
 }

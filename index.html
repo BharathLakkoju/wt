@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/18718c7391.js" crossorigin="anonymous"></script>
     <!-- bootstrap styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
         :root {
             --bg: black;
@@ -31,9 +32,11 @@
             font-size: x-large;
             color: var(--white);
             padding-left: 3%;
+            text-shadow: 0px 0px 10px black;
         }
         .btn {
             margin-right: 1%;
+            text-shadow: 0px 0px 10px black;
         }
         .btn, .btn:hover{
             color: var(--white);
@@ -119,189 +122,209 @@
         </div>
     </nav>
     <!-- navbar end -->
-    <!-- carousel start -->
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./images/img1.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>            
+    <!-- main section -->
+    <main>
+        <!-- carousel start -->
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/img1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>            
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/img2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>            
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/img3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i> View</a>
+                    </div>            
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="./images/img2.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>            
-            </div>
-            <div class="carousel-item">
-                <img src="./images/img3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i> View</a>
-                </div>            
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- carousel end -->
-    <!-- trending today end -->
-    <h1 class="trend">trending today</h1>
-    <section class="sec">
-        <div class="arrow-left hidden">
-            <div>
-                <button type="submit" id="left"><i class="fa-solid fa-backward fa-sm" style="color: #ffffff;"></i></button>
+        <!-- carousel end -->
+        <!-- trending today end -->
+        <h1 class="trend">trending today</h1>
+        <section class="sec">
+            <div class="arrow-left hidden">
+                <div>
+                    <button type="submit" id="left"><i class="fa-solid fa-backward fa-sm" style="color: #ffffff;"></i></button>
+                </div>
             </div>
+            <div class="cards">
+                <div class="item">
+                    <img src="./images/img4.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img5.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img6.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img7.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img8.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img9.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img10.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img11.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img12.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/img13.jpg" class="item-img" alt="">
+                    <div class="item-desc">
+                        <h5 class="name">NAME</h5>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-right hidden">
+                <div>
+                    <button type="submit" id="right"><i class="fa-solid fa-forward fa-sm" style="color: #ffffff;"></i></button>
+                </div>
+            </div>
+        </section>
+        <!-- trending today end -->
+        <!-- list start -->
+        <div class="list-container">
+            <h1 class="trend-list">list</h1>
+            <a class="btn-list" href="list.html">More&ensp;<i class="fa-solid fa-greater-than fa-sm" style="color: #ffffff;"></i></a>
         </div>
-        <div class="cards">
-            <div class="item">
-                <img src="./images/img4.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+        <section class="list">
+            <div class="grids">
+                <div class="grid-card">
+                    <img class="item-img" src="./images/img2.jpg" alt="">
+                    <div class="grid-desc">
+                        <h5 class="name">NAME</h5><div></div>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="grid-card">
+                    <img class="item-img" src="./images/img3.jpg" alt="">
+                    <div class="grid-desc">
+                        <h5 class="name">NAME</h5><div></div>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="grid-card">
+                    <img class="item-img" src="./images/img4.jpg" alt="">
+                    <div class="grid-desc">
+                        <h5 class="name">NAME</h5><div></div>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="grid-card">
+                    <img class="item-img" src="./images/img5.jpg" alt="">
+                    <div class="grid-desc">
+                        <h5 class="name">NAME</h5><div></div>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="grid-card">
+                    <img class="item-img" src="./images/img6.jpg" alt="">
+                    <div class="grid-desc">
+                        <h5 class="name">NAME</h5><div></div>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="grid-card">
+                    <img class="item-img" src="./images/img7.jpg" alt="">
+                    <div class="grid-desc">
+                        <h5 class="name">NAME</h5><div></div>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="grid-card hidden">
+                    <img class="item-img" src="./images/img12.jpg" alt="">
+                    <div class="grid-desc">
+                        <h5 class="name">NAME</h5><div></div>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
+                </div>
+                <div class="grid-card hidden">
+                    <img class="item-img" src="./images/img13.jpg" alt="">
+                    <div class="grid-desc">
+                        <h5 class="name">NAME</h5><div></div>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
+                        <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <img src="./images/img5.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/img6.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/img7.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/img8.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/img9.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/img10.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/img11.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/img12.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="./images/img13.jpg" class="item-img" alt="">
-                <div class="item-desc">
-                    <h5 class="name">NAME</h5>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-        </div>
-        <div class="arrow-right hidden">
-            <div>
-                <button type="submit" id="right"><i class="fa-solid fa-forward fa-sm" style="color: #ffffff;"></i></button>
-            </div>
-        </div>
-    </section>
-    <!-- trending today end -->
-    <!-- list start -->
-    <div class="list-container">
-        <h1 class="trend-list">list</h1>
-        <a class="btn-list" href="list.html">More&ensp;<i class="fa-solid fa-greater-than fa-sm" style="color: #ffffff;"></i></a>
-    </div>
-    <section class="list">
-        <div class="grids">
-            <div class="grid-card">
-                <img class="item-img" src="./images/img2.jpg" alt="">
-                <div class="grid-desc">
-                    <h5 class="name">NAME</h5><div></div>
-                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="grid-card">
-                <img class="item-img" src="./images/img3.jpg" alt="">
-                <div class="grid-desc">
-                    <h5 class="name">NAME</h5><div></div>
-                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="grid-card">
-                <img class="item-img" src="./images/img4.jpg" alt="">
-                <div class="grid-desc">
-                    <h5 class="name">NAME</h5><div></div>
-                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="grid-card">
-                <img class="item-img" src="./images/img5.jpg" alt="">
-                <div class="grid-desc">
-                    <h5 class="name">NAME</h5><div></div>
-                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="grid-card">
-                <img class="item-img" src="./images/img6.jpg" alt="">
-                <div class="grid-desc">
-                    <h5 class="name">NAME</h5><div></div>
-                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-            <div class="grid-card">
-                <img class="item-img" src="./images/img7.jpg" alt="">
-                <div class="grid-desc">
-                    <h5 class="name">NAME</h5><div></div>
-                    <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est maiores rerum rem explicabo odio? Explicabo reprehenderit, voluptatum mollitia inventore, quos nesciunt et sed velit suscipit aperiam consectetur, necessitatibus nobis eos!</p>
-                    <a class="but" href=""><i class="fa-regular fa-eye fa-xs"></i>&ensp;View</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- list end -->
+        </section>
+        <!-- list end -->
+    </main>
+    <!-- main end -->
     <!-- footer start -->
     <footer class="ftr">
         <div class="ftr-contain">
@@ -312,7 +335,7 @@
                 <h4>Learn more about us here.</h4>
             </div>
         </div>
-        <div class="ftr-content-links">
+        <div class="ftr-content">
             <div class="ftr-links">
                 <a class="git" target="_blank" href="http://www.github.com/bharathlakkoju/wt">
                     <i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i>&ensp;
@@ -323,8 +346,6 @@
                     LinkedIn
                 </a>
             </div>
-        </div>
-        <div class="ftr-content-nav">
             <div class="ftr-nav">
                 <a class="ftr-nav-home" href="#"><i class="fa-solid fa-house fa-sm" style="color: #ffffff;"></i>&ensp;Home</a>
                 <a class="ftr-nav-list" href="list.html"><i class="fa-solid fa-list fa-sm" style="color: #ffffff;"></i>&ensp;List</a>
@@ -369,6 +390,30 @@
                 }
             });
         
+        ScrollReveal().reveal('.trend', {
+            delay: 200,
+            reset: true,
+        })
+        ScrollReveal().reveal('.carousel', {
+            delay: 200,
+            reset: true,
+        });
+        ScrollReveal().reveal('.sec', {
+            delay: 300,
+            reset: true,
+        });
+        ScrollReveal().reveal('.list-container', {
+            delay: 200,
+            reset: true,
+        });
+        ScrollReveal().reveal('.list', {
+            delay: 300,
+            reset: true,
+        });
+        ScrollReveal().reveal('.ftr', {
+            delay: 200,
+            reset: true,
+        });
     </script>
 </body>
 </html>
