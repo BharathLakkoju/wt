@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,13 +98,33 @@
                 margin-top: 70px;
             }
         }
+        .cont {
+            display: flex;
+            width: 400px;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .bar {
+            padding: 0;
+        }
+        .usr, .logout, .login {
+            font-size: large;
+        }
     </style>
 </head>
 <body>
     <!-- navbar start -->
     <nav class="navbar fixed-top">
-        <a class="nav-home" href="index.html">VResume</a>
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</button>
+        <a class="nav-home" href="./index.php">VResume</a>
+        <div class="cont">
+            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
+            <a class="nav-home usr" href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i>&ensp;<?php echo $_SESSION['username']; ?></a>
+            <a class="nav-home logout" href="./logout.php">Logout&ensp;<i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
+            <?php else : ?>
+            <a class="nav-home login" href="./signup.php">Login/SignUp</a>
+            <?php endif; ?>
+            <button class="btn bar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+        </div>
         <div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">VResume</h5>
@@ -109,15 +132,9 @@
             </div>
             <div class="offcanvas-body bg-black">
                 <ul class="nav-list">
-                    <li><a href="index.html"><i class="fa-solid fa-house fa-sm" style="color: #ffffff;"></i>&ensp;Home</a></li>
-                    <li><a href="list.html"><i class="fa-solid fa-list fa-sm" style="color: #ffffff;"></i>&ensp;List</a></li>
-                    <li><a href="upload.html"><i class="fa-solid fa-upload fa-sm" style="color: #ffffff;"></i>&ensp;Upload</a></li>
-                    <li>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>                    
-                    </li>
+                    <li><a href="./index.php"><i class="fa-solid fa-house fa-sm" style="color: #ffffff;"></i>&ensp;Home</a></li>
+                    <li><a href="list.php"><i class="fa-solid fa-list fa-sm" style="color: #ffffff;"></i>&ensp;List</a></li>
+                    <li><a href="upload.php"><i class="fa-solid fa-upload fa-sm" style="color: #ffffff;"></i>&ensp;Upload</a></li>
                 </ul>
             </div>
         </div>
@@ -253,7 +270,7 @@
         <!-- list start -->
         <div class="list-container">
             <h1 class="trend-list">list</h1>
-            <a class="btn-list" href="list.html">More&ensp;<i class="fa-solid fa-greater-than fa-sm" style="color: #ffffff;"></i></a>
+            <a class="btn-list" href="list.php">More&ensp;<i class="fa-solid fa-greater-than fa-sm" style="color: #ffffff;"></i></a>
         </div>
         <section class="list">
             <div class="grids">
@@ -349,8 +366,8 @@
             </div>
             <div class="ftr-nav">
                 <a class="ftr-nav-home" href="#"><i class="fa-solid fa-house fa-sm" style="color: #ffffff;"></i>&ensp;Home</a>
-                <a class="ftr-nav-list" href="list.html"><i class="fa-solid fa-list fa-sm" style="color: #ffffff;"></i>&ensp;List</a>
-                <a class="ftr-nav-upload" href="upload.html"><i class="fa-solid fa-upload fa-sm" style="color: #ffffff;"></i>&ensp;Upload</a>
+                <a class="ftr-nav-list" href="list.php"><i class="fa-solid fa-list fa-sm" style="color: #ffffff;"></i>&ensp;List</a>
+                <a class="ftr-nav-upload" href="upload.php"><i class="fa-solid fa-upload fa-sm" style="color: #ffffff;"></i>&ensp;Upload</a>
             </div>
         </div>
     </footer>
